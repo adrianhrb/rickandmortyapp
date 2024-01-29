@@ -23,6 +23,7 @@ function App() {
     .catch(error => console.log('Something went wrong'))
   }
 
+
   const pagePrevious = () => {
     requestCharacters(extraInfo.prev)
   }
