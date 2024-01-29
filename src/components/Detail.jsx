@@ -1,6 +1,9 @@
 import React from "react";
 
-const Characters = ({ character }) => {
+const DetailCharacter = ({ character, detailRequest }) => {
+
+  detailRequest(character.id)
+
   return (
     <div className="row">
         <div key={character.id} className="col-md-6 col-lg-3 mb-5 p">
@@ -18,4 +21,4 @@ const Characters = ({ character }) => {
   );
 };
 
-export default Characters
+export default DetailCharacter;
