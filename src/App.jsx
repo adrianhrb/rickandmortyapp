@@ -38,10 +38,12 @@ function App() {
   }
 
   const pagePrevious = () => {
+    // Mandamos una petición para obtener los personajes de la página anterior
     requestCharacters(extraInfo.prev);
   };
 
   const pageNext = () => {
+    // Mandamos una petición para obtener los personajes de la página anterior
     requestCharacters(extraInfo.next);
   };
 
@@ -71,7 +73,7 @@ function App() {
               />,
             ]}
           />
-          <Route path="/:charId" element={<DetailCharacter char={singleCharacter} detailRequest={detailCharacter} />}/>
+          <Route path="/:charId/" element={<DetailCharacter char={singleCharacter} detailRequest={detailCharacter} />}/>
         </Routes>
       </div>
     </>

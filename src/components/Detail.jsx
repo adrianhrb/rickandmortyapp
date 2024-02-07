@@ -2,10 +2,13 @@ import React from "react";
 
 const DetailCharacter = ({ character, detailRequest }) => {
 
-  detailRequest(character.id)
+    character.map((char) => {
+      detailRequest(char.id)
+    })
 
   return (
     <div className="row">
+      character.map
         <div key={character.id} className="col-md-6 col-lg-3 mb-5 p">
             <div className="card" style={{minWidth: "200px"}}>
                 <img src={character.image} alt={character.name} />
