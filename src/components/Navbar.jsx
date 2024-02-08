@@ -3,7 +3,7 @@ import React from "react";
 
 
 // Hacemos usos de las props para poder modificar el título del NavBar
-const Navbar = () => {
+const Navbar = (brand) => {
     return (
         <nav className="navbar navbar-dark bg-dark">
             <div className="container">
