@@ -10,6 +10,7 @@ function App() {
   // Estado para información extra como las páginas anteriores y siguientes
   const [extraInfo, setExtraInfo] = useState({});
 
+  // Url a la que hacemos las peticiones
   const charListUrl = "https://rickandmortyapi.com/api/character";
 
   const requestCharacters = (url) => {
@@ -17,8 +18,9 @@ function App() {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        // Cambiamos los estados de characters y la extra info
+        // Cambiamos los estados de characters
         setCharacters(data.results);
+        // Guardamos la información extra cambiando el estado
         setExtraInfo(data.info);
       })
       .catch((error) => console.log("Something went wrong"));
@@ -40,6 +42,7 @@ function App() {
 
   return (
     <>
+      {/* Importamos todos los componentes que tenemos y les pasamos las variables que necesitan */}
       <Navbar brand="Rick and Morty App" />
       <div className="container mt-5">
         <Routes>

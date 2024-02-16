@@ -1,6 +1,6 @@
 import React from "react";
 
-// Hacemos usos de las props para poder modificar el título del NavBar
+// El navegador es un componente independiente que no recibe nada
 const Navbar = () => {
   return (
     <nav className="navbar navbar-dark bg-dark">
