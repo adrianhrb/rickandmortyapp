@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import { useEffect, useState } from "react";
 import Character from "./components/Characters";
 import Pagination from "./components/Pagination";
+import Details from "./pages/Details";
 
 function App() {
   // Estado de la aplicación para almacenar los personajes de la API
@@ -58,6 +59,7 @@ function App() {
               />,
             ]}
           />
+          <Route path="/details/:id" element={<Details />}></Route>
         </Routes>
       </div>
     </>
